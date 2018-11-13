@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  sendmail:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    hostname: sendmail.localdomain
+    ports:
+      - "25:25"
+      - "587:587"
